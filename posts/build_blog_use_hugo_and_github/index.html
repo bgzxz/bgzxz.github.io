@@ -3,8 +3,8 @@
 <head>
   
   <meta charset="utf-8">
-  <title>Posts</title>
-  <meta name="description" content="Posts">
+  <title>使用hugo和github搭建个人blog</title>
+  <meta name="description" content="使用hugo和github搭建个人blog">
   <meta name="author" content="bgzxz">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -336,8 +336,6 @@ a {
 
   
   
-  <link href="https://bgzxz.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="bgzxz&#39;s Blog Feed" />
-  
 
   <meta name="generator" content="Hugo 0.54-DEV" />
 
@@ -375,47 +373,146 @@ a {
 </div>
 
 
-
 <div class="pure-g">
   <div class="pure-u-1-24 pure-u-md-5-24"></div>
   <div class="pure-u-11-12 pure-u-md-7-12">
-    <div class="post-content">
-      <p class="posts-name">Posts:</p>
+    <div class="post">
 
-      <ul class="posts">
+      <div class="post-title">
+        <p class="footnote">
+          <time datetime="2018-01-01 14:11:54 &#43;0800 CST">
+            
+              01-01-2018
+            
+          </time>
         
         
         
-        <li>
-          
-          <a class="post-list" href="https://bgzxz.github.io/posts/build_blog_use_hugo_and_github/">使用hugo和github搭建个人blog</a>
 
-          <p class="footnote">
-            <time datetime="2018-01-01 14:11:54 &#43;0800 CST">
-              
-                01-01-2018
-              
-            </time>
-          </p>
-        </li>
         
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://bgzxz.github.io/posts/my-first-post/">My First Post</a>
 
-          <p class="footnote">
-            <time datetime="2017-12-30 23:31:34 &#43;0800 CST">
-              
-                12-30-2017
-              
-            </time>
-          </p>
-        </li>
         
+        </p>
+        <h1>使用hugo和github搭建个人blog</h1>
+      </div>
+
+      <div class="post-content">
         
-      </ul>
+
+<h1 id="hugo简介">hugo简介</h1>
+
+<p>golang实现的高性能静态站点生辰工具</p>
+
+<p>更多细节见<a href="https://gohugo.io/">官方网站</a></p>
+
+<h1 id="安装hugo">安装hugo</h1>
+
+<p>Homebrew (macOS)</p>
+
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install hugo</code></pre></div>
+ 源码安装
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/gohugoio/hugo.git
+cd hugo
+go install --tags extended</code></pre></div></p>
+
+<p>更多安装方式见<a href="https://gohugo.io/getting-started/installing/">官方文档</a></p>
+
+<h1 id="验证安装">验证安装</h1>
+
+<p>执行hugo version,显示版本号表示安装成功</p>
+
+<h1 id="创建一个site">创建一个site</h1>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site quickstart</code></pre></div>
+
+<h1 id="添加主题">添加主题</h1>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd quickstart;
+git init;
+git submodule add https://github.com/aos/temple.git themes/temple;
+
+<span style="color:#75715e"># Edit your config.toml configuration file</span>
+<span style="color:#75715e"># and add the temple theme.</span>
+echo <span style="color:#e6db74">&#39;theme = &#34;temple&#34;&#39;</span> &gt;&gt; config.toml</code></pre></div>
+
+<h1 id="添加文章">添加文章</h1>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new posts/my-first-post.md</code></pre></div>
+
+<h1 id="启动本地服务并验证页面">启动本地服务并验证页面</h1>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server -D
+
+Start Hugo dev server...
+
+                   | EN
++------------------+----+
+  Pages            | <span style="color:#ae81ff">11</span>
+  Paginator pages  |  <span style="color:#ae81ff">0</span>
+  Non-page files   |  <span style="color:#ae81ff">0</span>
+  Static files     |  <span style="color:#ae81ff">1</span>
+  Processed images |  <span style="color:#ae81ff">0</span>
+  Aliases          |  <span style="color:#ae81ff">0</span>
+  Sitemaps         |  <span style="color:#ae81ff">1</span>
+  Cleaned          |  <span style="color:#ae81ff">0</span>
+
+Total in <span style="color:#ae81ff">26</span> ms
+Watching <span style="color:#66d9ef">for</span> changes in /Users/bgxzx/my-site/blog/<span style="color:#f92672">{</span>content,data,layouts,static,themes<span style="color:#f92672">}</span>
+Watching <span style="color:#66d9ef">for</span> config changes in /Users/bgxzx/my-site/blog/config.toml
+Environment: <span style="color:#e6db74">&#34;development&#34;</span>
+Serving pages from /Users/bgxzx/my-site/blog/dev-public
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ <span style="color:#f92672">(</span>bind address <span style="color:#ae81ff">127</span>.0.0.1<span style="color:#f92672">)</span>
+Press Ctrl+C to stop</code></pre></div>
+
+<h1 id="使用github部署站点">使用github部署站点</h1>
+
+<ol>
+<li><p>在GitHub创建一个仓库用来保存站点的源码  (e.g. <code>blog</code>) 。</p></li>
+
+<li><p>创建 <code>&lt;USERNAME&gt;.github.io</code> 这样的仓库用来发布Hugo生成的静态站点。</p></li>
+
+<li><p><code>git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt;</code>。</p></li>
+
+<li><p>确保站点本地可以工作 (<code>hugo server</code> or <code>hugo server -t &lt;YOURTHEME&gt;</code>)。</p></li>
+
+<li><p>结束hugo server同时删除hugo生成的public目录。</p></li>
+
+<li><p>添加github站点仓库为子public模块 <code>git submodule add -b master git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public</code>。</p></li>
+</ol>
+
+<h1 id="创建自动化生成和部署脚本">创建自动化生成和部署脚本</h1>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+echo -e <span style="color:#e6db74">&#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;</span>
+
+<span style="color:#75715e"># Build the project.</span>
+hugo <span style="color:#75715e"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
+
+<span style="color:#75715e"># Go To Public folder</span>
+cd public
+<span style="color:#75715e"># Add changes to git.</span>
+git add .
+
+<span style="color:#75715e"># Commit changes.</span>
+msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rebuilding site `date`&#34;</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>
+  <span style="color:#66d9ef">then</span> msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">fi</span>
+git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6db74">&#34;</span>
+
+<span style="color:#75715e"># Push source and build repos.</span>
+git push origin master
+
+<span style="color:#75715e"># Come Back up to the Project Root</span>
+cd ..</code></pre></div>
+
+<p>访问<code>&lt;USERNAME&gt;.github.io</code>验证效果</p>
+
+<p>更多部署方式见<a href="https://gohugo.io/hosting-and-deployment/">官网</a></p>
+
+      </div>
     </div>
   </div>
   <div class="pure-u-1-24 pure-u-md-5-24"></div>
@@ -449,8 +546,6 @@ a {
 
         </ul>
         <a href="#" class="pure-menu-link pull-right" id="gototop-btn">↑↑</a>
-        
-        <a href="https://bgzxz.github.io/posts/index.xml" class="pure-menu-link pull-right">RSS</a>
         
       </div>
       

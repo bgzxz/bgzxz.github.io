@@ -7,10 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>bgzxz1987@email.com (bgzxz)</managingEditor>
     <webMaster>bgzxz1987@email.com (bgzxz)</webMaster>
-    <lastBuildDate>Sat, 30 Dec 2017 23:31:34 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jan 2018 14:11:54 +0800</lastBuildDate>
     
 	<atom:link href="https://bgzxz.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>使用hugo和github搭建个人blog</title>
+      <link>https://bgzxz.github.io/posts/build_blog_use_hugo_and_github/</link>
+      <pubDate>Mon, 01 Jan 2018 14:11:54 +0800</pubDate>
+      <author>bgzxz1987@email.com (bgzxz)</author>
+      <guid>https://bgzxz.github.io/posts/build_blog_use_hugo_and_github/</guid>
+      <description>hugo简介 golang实现的高性能静态站点生辰工具
+更多细节见官方网站
+安装hugo Homebrew (macOS)
+brew install hugo 源码安装 git clone https://github.com/gohugoio/hugo.git cd hugo go install --tags extended
+更多安装方式见官方文档
+验证安装 执行hugo version,显示版本号表示安装成功
+创建一个site hugo new site quickstart 添加主题 cd quickstart; git init; git submodule add https://github.com/aos/temple.git themes/temple; # Edit your config.toml configuration file # and add the temple theme. echo &amp;#39;theme = &amp;#34;temple&amp;#34;&amp;#39; &amp;gt;&amp;gt; config.toml 添加文章 hugo new posts/my-first-post.md 启动本地服务并验证页面 hugo server -D Start Hugo dev server... | EN +------------------+----+ Pages | 11 Paginator pages | 0 Non-page files | 0 Static files | 1 Processed images | 0 Aliases | 0 Sitemaps | 1 Cleaned | 0 Total in 26 ms Watching for changes in /Users/bgxzx/my-site/blog/{content,data,layouts,static,themes} Watching for config changes in /Users/bgxzx/my-site/blog/config.</description>
+    </item>
     
     <item>
       <title>My First Post</title>
