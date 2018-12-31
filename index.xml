@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>bgzxz1987@email.com (bgzxz)</managingEditor>
     <webMaster>bgzxz1987@email.com (bgzxz)</webMaster>
-    <lastBuildDate>Mon, 01 Jan 2018 14:11:54 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jan 2018 08:31:34 +0800</lastBuildDate>
     
 	<atom:link href="https://bgzxz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>语义化版本</title>
+      <link>https://bgzxz.github.io/posts/semantic_versioning/</link>
+      <pubDate>Wed, 03 Jan 2018 08:31:34 +0800</pubDate>
+      <author>bgzxz1987@email.com (bgzxz)</author>
+      <guid>https://bgzxz.github.io/posts/semantic_versioning/</guid>
+      <description>版本格式：主版本号.次版本号.修订号，版本号递增规则如下：
+1.主版本号：当你做了不兼容的 API 修改
+2.次版本号：当你做了向下兼容的功能性新增
+3.修订号：当你做了向下兼容的问题修正
+先行版本号及版本编译元数据可以加到“主版本号.次版本号.修订号”的后面，作为延伸。
+更多细节见官网</description>
+    </item>
     
     <item>
       <title>使用hugo和github搭建个人blog</title>

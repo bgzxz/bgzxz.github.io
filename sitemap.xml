@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://bgzxz.github.io/posts/semantic_versioning/</loc>
+    <lastmod>2018-01-03T08:31:34+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bgzxz.github.io/posts/build_blog_use_hugo_and_github/</loc>
     <lastmod>2018-01-01T14:11:54+08:00</lastmod>
   </url>
@@ -24,7 +29,7 @@
   
   <url>
     <loc>https://bgzxz.github.io/posts/</loc>
-    <lastmod>2018-01-01T14:11:54+08:00</lastmod>
+    <lastmod>2018-01-03T08:31:34+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -35,7 +40,7 @@
   
   <url>
     <loc>https://bgzxz.github.io/</loc>
-    <lastmod>2018-01-01T14:11:54+08:00</lastmod>
+    <lastmod>2018-01-03T08:31:34+08:00</lastmod>
     <priority>0</priority>
   </url>
   
