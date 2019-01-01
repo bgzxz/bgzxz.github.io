@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>bgzxz1987@email.com (bgzxz)</managingEditor>
     <webMaster>bgzxz1987@email.com (bgzxz)</webMaster>
-    <lastBuildDate>Wed, 03 Jan 2018 08:31:34 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 01 Feb 2018 16:16:05 +0800</lastBuildDate>
     
 	<atom:link href="https://bgzxz.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>每个软件工程师都应该知道的延迟数据</title>
+      <link>https://bgzxz.github.io/posts/numbers_everyone_should_know/</link>
+      <pubDate>Thu, 01 Feb 2018 16:16:05 +0800</pubDate>
+      <author>bgzxz1987@email.com (bgzxz)</author>
+      <guid>https://bgzxz.github.io/posts/numbers_everyone_should_know/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>语义化版本</title>
