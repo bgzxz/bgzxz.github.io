@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>bgzxz1987@email.com (bgzxz)</managingEditor>
     <webMaster>bgzxz1987@email.com (bgzxz)</webMaster>
-    <lastBuildDate>Thu, 01 Feb 2018 16:16:05 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 05 Feb 2018 17:34:52 +0800</lastBuildDate>
     
 	<atom:link href="https://bgzxz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Full Stack</title>
+      <link>https://bgzxz.github.io/posts/full_stack/</link>
+      <pubDate>Mon, 05 Feb 2018 17:34:52 +0800</pubDate>
+      <author>bgzxz1987@email.com (bgzxz)</author>
+      <guid>https://bgzxz.github.io/posts/full_stack/</guid>
+      <description>facebook the-full-stack-part阅读心得
+1,全栈工程师是个通才，能理解软件系统的不同层的行为
+2,通过应用的行为就能想得到软件栈的行为
+3,对系统的数据形成和数据流有深刻的认识，从而能更好的设计和优化系统
+一些有用的理解数据形成和数据流的因素: * Working data size * Average request size * Request rate * Mutation rate * Consistency * Locality * Computation * Latency * Contention</description>
+    </item>
     
     <item>
       <title>每个软件工程师都应该知道的延迟数据</title>
