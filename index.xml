@@ -7,10 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>bgzxz1987@email.com (bgzxz)</managingEditor>
     <webMaster>bgzxz1987@email.com (bgzxz)</webMaster>
-    <lastBuildDate>Mon, 05 Feb 2018 17:34:52 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 09 Mar 2019 14:11:54 +0800</lastBuildDate>
     
 	<atom:link href="https://bgzxz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>使用jmh进行基准测试</title>
+      <link>https://bgzxz.github.io/posts/java_benchmark/</link>
+      <pubDate>Sat, 09 Mar 2019 14:11:54 +0800</pubDate>
+      <author>bgzxz1987@email.com (bgzxz)</author>
+      <guid>https://bgzxz.github.io/posts/java_benchmark/</guid>
+      <description>什么是基准测试 基准测试是指通过设计科学的测试方法、测试工具和测试系统，实现对一类测试对象的某项性能指标进行定量的和可对比的测试。
+java基准测试工具jmh 官方介绍
+JMH is a Java harness for building, running, and analysing nano/micro/milli/macro benchmarks written in Java and other languages targetting the JVM.
+使用官网mvn骨架工程创建项目 命令行方式
+mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=org.openjdk.jmh -DarchetypeArtifactId=jmh-java-benchmark-archetype -DarchetypeVersion=1.21 -DgroupId=io.docbot -DartifactId=jmh-example -Dversion=1.0-SNAPSHOT -DarchetypeCatalog=https://maven.aliyun.com/repository/public/archetype-catalog.xml idea方式
+idea新建maven项目并添加骨架类型
+填写必要的项目信息 第一个例子 package io.docbot; import org.openjdk.jmh.annotations.Benchmark; import org.openjdk.jmh.annotations.BenchmarkMode; import org.openjdk.jmh.annotations.Mode; import org.openjdk.jmh.annotations.OutputTimeUnit; import org.openjdk.jmh.runner.Runner; import org.openjdk.jmh.runner.RunnerException; import org.openjdk.jmh.runner.options.Options; import org.openjdk.jmh.runner.options.OptionsBuilder; import java.util.concurrent.TimeUnit; public class MyBenchmark { @Benchmark @BenchmarkMode(Mode.AverageTime) @OutputTimeUnit(TimeUnit.MILLISECONDS) public void testMethod() { try { Thread.</description>
+    </item>
     
     <item>
       <title>Full Stack</title>
