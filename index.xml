@@ -28,6 +28,17 @@ idea新建maven项目并添加骨架类型
     </item>
     
     <item>
+      <title>java注解处理器</title>
+      <link>https://bgzxz.github.io/posts/annotation-processing/</link>
+      <pubDate>Sun, 11 Mar 2018 22:11:54 +0800</pubDate>
+      <author>bgzxz1987@email.com (bgzxz)</author>
+      <guid>https://bgzxz.github.io/posts/annotation-processing/</guid>
+      <description>最近发现周围的一些小伙伴开始像下面这样写DTO了
+import lombok.AccessLevel; import lombok.Setter; import lombok.Data; import lombok.ToString; @Data public class ExampleDTO { private final String name; @Setter(AccessLevel.PACKAGE) private int age; private double score; private String[] tags; @ToString(includeFieldNames=true) @Data(staticConstructor=&amp;#34;of&amp;#34;) public static class Exercise&amp;lt;T&amp;gt; { private final String name; private final T value; } } 顺着引用的包路径找到lombok这个包，看了下官网的介绍
+Project Lombok is a java library that automatically plugs into your editor and build tools, spicing up your java. Never write another getter or equals method again, with one annotation your class has a fully featured builder, Automate your logging variables, and much more.</description>
+    </item>
+    
+    <item>
       <title>Full Stack</title>
       <link>https://bgzxz.github.io/posts/full_stack/</link>
       <pubDate>Mon, 05 Feb 2018 17:34:52 +0800</pubDate>
