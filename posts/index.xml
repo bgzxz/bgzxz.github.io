@@ -7,10 +7,45 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>bgzxz1987@email.com (bgzxz)</managingEditor>
     <webMaster>bgzxz1987@email.com (bgzxz)</webMaster>
-    <lastBuildDate>Sat, 09 Mar 2019 14:11:54 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 May 2019 22:31:34 +0800</lastBuildDate>
     
 	<atom:link href="https://bgzxz.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>metrics领域的SLF4J(Micrometer)</title>
+      <link>https://bgzxz.github.io/posts/micrometer/</link>
+      <pubDate>Thu, 02 May 2019 22:31:34 +0800</pubDate>
+      <author>bgzxz1987@email.com (bgzxz)</author>
+      <guid>https://bgzxz.github.io/posts/micrometer/</guid>
+      <description>Micrometer是什么？ 供应商中立的应用程序指标facade库
+Micrometer为用于最流行的监控系统的仪表客户端提供了一个简单的facade，允许您在没有供应商锁定的情况下检测基于JVM的应用程序代码。可以理解为metrics领域的SLF4J。
+Micrometer实现了哪些功能？  多维度的Metrics
+timers, gauges, counters, distribution summaries, and long task timers
+ 预配置的绑定
+Out-of-the-box instrumentation of caches, the class loader, garbage collection, processor utilization, thread pools, and more tailored to actionable insight
+ spring集成
+Starting with Spring Boot 2.0, Micrometer is the instrumentation library powering the delivery of application metrics from Spring. Support is ported back to Boot 1.x through an additional library dependency
+ 支持各种流行的监控系统</description>
+    </item>
+    
+    <item>
+      <title>实现应用程序可观察性的3种方式</title>
+      <link>https://bgzxz.github.io/posts/observability_3_ways/</link>
+      <pubDate>Wed, 01 May 2019 22:31:34 +0800</pubDate>
+      <author>bgzxz1987@email.com (bgzxz)</author>
+      <guid>https://bgzxz.github.io/posts/observability_3_ways/</guid>
+      <description> 项目上线报错了，
+线上功能报错了，
+用户投诉页面卡顿了，
+系统故障导致业务数据异常了 。。。
+作为程序员，在日常的工作中总是要面对如上的哪些问题。只有更多的了解系统的内部状态信息，才能更快更精确的定位和解决这些问题。那么如何让系统提供更多的有用信息了。
+提升系统的可观测性可以从以下三个方法中获取：
+ Logging - 纪录事件
+ Metrics － 纪录指标数据事件
+ Tracing － 纪录系统之间的因果关系事件
+  参考资料 </description>
+    </item>
     
     <item>
       <title>使用jmh进行基准测试</title>

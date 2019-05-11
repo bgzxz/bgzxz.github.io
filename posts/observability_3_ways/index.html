@@ -3,8 +3,8 @@
 <head>
   
   <meta charset="utf-8">
-  <title>Posts</title>
-  <meta name="description" content="Posts">
+  <title>实现应用程序可观察性的3种方式</title>
+  <meta name="description" content="实现应用程序可观察性的3种方式">
   <meta name="author" content="bgzxz">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -336,8 +336,6 @@ a {
 
   
   
-  <link href="https://bgzxz.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="bgzxz&#39;s Blog Feed" />
-  
 
   <meta name="generator" content="Hugo 0.54-DEV" />
 
@@ -375,152 +373,56 @@ a {
 </div>
 
 
-
 <div class="pure-g">
   <div class="pure-u-1-24 pure-u-md-5-24"></div>
   <div class="pure-u-11-12 pure-u-md-7-12">
-    <div class="post-content">
-      <p class="posts-name">Posts:</p>
+    <div class="post">
 
-      <ul class="posts">
+      <div class="post-title">
+        <p class="footnote">
+          <time datetime="2019-05-01 22:31:34 &#43;0800 CST">
+            
+              05-01-2019
+            
+          </time>
         
         
         
-        <li>
-          
-          <a class="post-list" href="https://bgzxz.github.io/posts/micrometer/">metrics领域的SLF4J(Micrometer)</a>
 
-          <p class="footnote">
-            <time datetime="2019-05-02 22:31:34 &#43;0800 CST">
-              
-                05-02-2019
-              
-            </time>
-          </p>
-        </li>
         
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://bgzxz.github.io/posts/observability_3_ways/">实现应用程序可观察性的3种方式</a>
 
-          <p class="footnote">
-            <time datetime="2019-05-01 22:31:34 &#43;0800 CST">
-              
-                05-01-2019
-              
-            </time>
-          </p>
-        </li>
         
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://bgzxz.github.io/posts/java_benchmark/">使用jmh进行基准测试</a>
+        </p>
+        <h1>实现应用程序可观察性的3种方式</h1>
+      </div>
 
-          <p class="footnote">
-            <time datetime="2019-03-09 14:11:54 &#43;0800 CST">
-              
-                03-09-2019
-              
-            </time>
-          </p>
-        </li>
+      <div class="post-content">
         
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://bgzxz.github.io/posts/annotation-processing/">java注解处理器</a>
 
-          <p class="footnote">
-            <time datetime="2018-03-11 22:11:54 &#43;0800 CST">
-              
-                03-11-2018
-              
-            </time>
-          </p>
-        </li>
-        
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://bgzxz.github.io/posts/full_stack/">Full Stack</a>
+<p>项目上线报错了，</p>
 
-          <p class="footnote">
-            <time datetime="2018-02-05 17:34:52 &#43;0800 CST">
-              
-                02-05-2018
-              
-            </time>
-          </p>
-        </li>
-        
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://bgzxz.github.io/posts/numbers_everyone_should_know/">每个软件工程师都应该知道的延迟数据</a>
+<p>线上功能报错了，</p>
 
-          <p class="footnote">
-            <time datetime="2018-02-01 16:16:05 &#43;0800 CST">
-              
-                02-01-2018
-              
-            </time>
-          </p>
-        </li>
-        
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://bgzxz.github.io/posts/semantic_versioning/">语义化版本</a>
+<p>用户投诉页面卡顿了，</p>
 
-          <p class="footnote">
-            <time datetime="2018-01-03 08:31:34 &#43;0800 CST">
-              
-                01-03-2018
-              
-            </time>
-          </p>
-        </li>
-        
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://bgzxz.github.io/posts/build_blog_use_hugo_and_github/">使用hugo和github搭建个人blog</a>
+<p>系统故障导致业务数据异常了
+。。。</p>
 
-          <p class="footnote">
-            <time datetime="2018-01-01 14:11:54 &#43;0800 CST">
-              
-                01-01-2018
-              
-            </time>
-          </p>
-        </li>
-        
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://bgzxz.github.io/posts/my-first-post/">My First Post</a>
+<p>作为程序员，在日常的工作中总是要面对如上的哪些问题。只有更多的了解系统的内部状态信息，才能更快更精确的定位和解决这些问题。那么如何让系统提供更多的有用信息了。</p>
 
-          <p class="footnote">
-            <time datetime="2017-12-30 23:31:34 &#43;0800 CST">
-              
-                12-30-2017
-              
-            </time>
-          </p>
-        </li>
-        
-        
-      </ul>
+<p>提升系统的可观测性可以从以下三个方法中获取：</p>
+
+<ul>
+<li><p>Logging - 纪录事件</p></li>
+
+<li><p>Metrics － 纪录指标数据事件</p></li>
+
+<li><p>Tracing － 纪录系统之间的因果关系事件</p></li>
+</ul>
+
+<h1 id="参考资料-https-www-dotconferences-com-2017-04-adrian-cole-observability-3-ways-logging-metrics-tracing"><a href="https://www.dotconferences.com/2017/04/adrian-cole-observability-3-ways-logging-metrics-tracing">参考资料</a></h1>
+
+      </div>
     </div>
   </div>
   <div class="pure-u-1-24 pure-u-md-5-24"></div>
@@ -554,8 +456,6 @@ a {
 
         </ul>
         <a href="#" class="pure-menu-link pull-right" id="gototop-btn">↑↑</a>
-        
-        <a href="https://bgzxz.github.io/posts/index.xml" class="pure-menu-link pull-right">RSS</a>
         
       </div>
       

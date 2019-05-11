@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://bgzxz.github.io/posts/micrometer/</loc>
+    <lastmod>2019-05-02T22:31:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bgzxz.github.io/posts/observability_3_ways/</loc>
+    <lastmod>2019-05-01T22:31:34+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bgzxz.github.io/posts/java_benchmark/</loc>
     <lastmod>2019-03-09T14:11:54+08:00</lastmod>
   </url>
@@ -49,7 +59,7 @@
   
   <url>
     <loc>https://bgzxz.github.io/posts/</loc>
-    <lastmod>2019-03-09T14:11:54+08:00</lastmod>
+    <lastmod>2019-05-02T22:31:34+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -60,7 +70,7 @@
   
   <url>
     <loc>https://bgzxz.github.io/</loc>
-    <lastmod>2019-03-09T14:11:54+08:00</lastmod>
+    <lastmod>2019-05-02T22:31:34+08:00</lastmod>
     <priority>0</priority>
   </url>
   
