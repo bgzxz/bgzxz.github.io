@@ -7,10 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>bgzxz1987@email.com (bgzxz)</managingEditor>
     <webMaster>bgzxz1987@email.com (bgzxz)</webMaster>
-    <lastBuildDate>Thu, 02 May 2019 22:31:34 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 21 May 2019 20:31:34 +0800</lastBuildDate>
     
 	<atom:link href="https://bgzxz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>redis cluster环境搭建</title>
+      <link>https://bgzxz.github.io/posts/redis-cluster/</link>
+      <pubDate>Tue, 21 May 2019 20:31:34 +0800</pubDate>
+      <author>bgzxz1987@email.com (bgzxz)</author>
+      <guid>https://bgzxz.github.io/posts/redis-cluster/</guid>
+      <description>redis cluster是什么？ 官网解答
+如何搭建集群环境？ 1.官网下载源码 wget http://download.redis.io/releases/redis-5.0.5.tar.gz
+2.编译安装程序 tar -xzf redis-5.0.5.tar.gz cd redis-5.0.5 make make make install
+3.使用源码包utils里的install_server.sh快速配置redis server分布如下： 192.168.1.2 6379 192.168.1.6 6379 6380 6381 6382 192.168.1.7 6379 6380 6381  4.修改生成的配置文件，开启redis集群功能 cluster-enabled yes cluster-config-file nodes.conf cluster-node-timeout 5000 5.通过redis-server /etc/redis/***.conf启动server
+6.通过ps -ef | grep redis-server 确认server启动
+7.通过redis-cli 连接相应的节点，执行info命令，确保节点可访问，并开启了集群功能
+8.通过redis-cli &amp;ndash;cluster 工具初始化集群 redis-cli --cluster create 192.168.1.2:6379 192.168.1.6:6379 192.168.1.6:6380 192.168.1.6:6381 192.168.1.6:6382 192.168.1.7:6379 192.168.1.7:6380 192.168.1.7:6381 --cluster-replicas 1 工具会提示如下信息，主要是用来显示集群的Slot是如何分配，以及复制关系 &amp;gt;&amp;gt;&amp;gt; Performing hash slots allocation on 8 nodes.</description>
+    </item>
     
     <item>
       <title>metrics领域的SLF4J(Micrometer)</title>

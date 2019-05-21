@@ -3,8 +3,8 @@
 <head>
   
   <meta charset="utf-8">
-  <title>Posts</title>
-  <meta name="description" content="Posts">
+  <title>redis cluster环境搭建</title>
+  <meta name="description" content="redis cluster环境搭建">
   <meta name="author" content="bgzxz">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -336,8 +336,6 @@ a {
 
   
   
-  <link href="https://bgzxz.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="bgzxz&#39;s Blog Feed" />
-  
 
   <meta name="generator" content="Hugo 0.54-DEV" />
 
@@ -375,167 +373,166 @@ a {
 </div>
 
 
-
 <div class="pure-g">
   <div class="pure-u-1-24 pure-u-md-5-24"></div>
   <div class="pure-u-11-12 pure-u-md-7-12">
-    <div class="post-content">
-      <p class="posts-name">Posts:</p>
+    <div class="post">
 
-      <ul class="posts">
+      <div class="post-title">
+        <p class="footnote">
+          <time datetime="2019-05-21 20:31:34 &#43;0800 CST">
+            
+              05-21-2019
+            
+          </time>
         
         
         
-        <li>
-          
-          <a class="post-list" href="https://bgzxz.github.io/posts/redis-cluster/">redis cluster环境搭建</a>
 
-          <p class="footnote">
-            <time datetime="2019-05-21 20:31:34 &#43;0800 CST">
-              
-                05-21-2019
-              
-            </time>
-          </p>
-        </li>
         
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://bgzxz.github.io/posts/micrometer/">metrics领域的SLF4J(Micrometer)</a>
 
-          <p class="footnote">
-            <time datetime="2019-05-02 22:31:34 &#43;0800 CST">
-              
-                05-02-2019
-              
-            </time>
-          </p>
-        </li>
         
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://bgzxz.github.io/posts/observability_3_ways/">实现应用程序可观察性的3种方式</a>
+        </p>
+        <h1>redis cluster环境搭建</h1>
+      </div>
 
-          <p class="footnote">
-            <time datetime="2019-05-01 22:31:34 &#43;0800 CST">
-              
-                05-01-2019
-              
-            </time>
-          </p>
-        </li>
+      <div class="post-content">
         
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://bgzxz.github.io/posts/java_benchmark/">使用jmh进行基准测试</a>
 
-          <p class="footnote">
-            <time datetime="2019-03-09 14:11:54 &#43;0800 CST">
-              
-                03-09-2019
-              
-            </time>
-          </p>
-        </li>
-        
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://bgzxz.github.io/posts/annotation-processing/">java注解处理器</a>
+<h1 id="redis-cluster是什么">redis cluster是什么？</h1>
 
-          <p class="footnote">
-            <time datetime="2018-03-11 22:11:54 &#43;0800 CST">
-              
-                03-11-2018
-              
-            </time>
-          </p>
-        </li>
-        
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://bgzxz.github.io/posts/full_stack/">Full Stack</a>
+<p><a href="https://redis.io/topics/cluster-spec">官网解答</a></p>
 
-          <p class="footnote">
-            <time datetime="2018-02-05 17:34:52 &#43;0800 CST">
-              
-                02-05-2018
-              
-            </time>
-          </p>
-        </li>
-        
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://bgzxz.github.io/posts/numbers_everyone_should_know/">每个软件工程师都应该知道的延迟数据</a>
+<h1 id="如何搭建集群环境">如何搭建集群环境？</h1>
 
-          <p class="footnote">
-            <time datetime="2018-02-01 16:16:05 &#43;0800 CST">
-              
-                02-01-2018
-              
-            </time>
-          </p>
-        </li>
-        
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://bgzxz.github.io/posts/semantic_versioning/">语义化版本</a>
+<p>1.官网下载源码
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    wget http://download.redis.io/releases/redis-5.0.5.tar.gz</code></pre></div></p>
 
-          <p class="footnote">
-            <time datetime="2018-01-03 08:31:34 &#43;0800 CST">
-              
-                01-03-2018
-              
-            </time>
-          </p>
-        </li>
-        
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://bgzxz.github.io/posts/build_blog_use_hugo_and_github/">使用hugo和github搭建个人blog</a>
+<p>2.编译安装程序
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    tar -xzf redis-5.0.5.tar.gz
+    cd redis-5.0.5
+    make
+    make make install</code></pre></div></p>
 
-          <p class="footnote">
-            <time datetime="2018-01-01 14:11:54 &#43;0800 CST">
-              
-                01-01-2018
-              
-            </time>
-          </p>
-        </li>
-        
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://bgzxz.github.io/posts/my-first-post/">My First Post</a>
+<p>3.使用源码包utils里的install_server.sh快速配置redis
+  server分布如下：
+  <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#ae81ff">192</span>.168.1.2 <span style="color:#ae81ff">6379</span>
+    <span style="color:#ae81ff">192</span>.168.1.6 <span style="color:#ae81ff">6379</span> <span style="color:#ae81ff">6380</span> <span style="color:#ae81ff">6381</span> <span style="color:#ae81ff">6382</span>
+    <span style="color:#ae81ff">192</span>.168.1.7 <span style="color:#ae81ff">6379</span> <span style="color:#ae81ff">6380</span> <span style="color:#ae81ff">6381</span>
+  </code></pre></div>
+4.修改生成的配置文件，开启redis集群功能
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    cluster-enabled yes
+    cluster-config-file nodes.conf
+    cluster-node-timeout <span style="color:#ae81ff">5000</span></code></pre></div>
+5.通过redis-server /etc/redis/***.conf启动server</p>
 
-          <p class="footnote">
-            <time datetime="2017-12-30 23:31:34 &#43;0800 CST">
-              
-                12-30-2017
-              
-            </time>
-          </p>
-        </li>
-        
-        
-      </ul>
+<p>6.通过ps -ef | grep redis-server 确认server启动</p>
+
+<p>7.通过redis-cli 连接相应的节点，执行info命令，确保节点可访问，并开启了集群功能</p>
+
+<p>8.通过redis-cli &ndash;cluster 工具初始化集群
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    redis-cli --cluster create <span style="color:#ae81ff">192</span>.168.1.2:6379 <span style="color:#ae81ff">192</span>.168.1.6:6379 <span style="color:#ae81ff">192</span>.168.1.6:6380 <span style="color:#ae81ff">192</span>.168.1.6:6381 <span style="color:#ae81ff">192</span>.168.1.6:6382 <span style="color:#ae81ff">192</span>.168.1.7:6379 <span style="color:#ae81ff">192</span>.168.1.7:6380 <span style="color:#ae81ff">192</span>.168.1.7:6381 --cluster-replicas <span style="color:#ae81ff">1</span></code></pre></div>
+工具会提示如下信息，主要是用来显示集群的Slot是如何分配，以及复制关系
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    &gt;&gt;&gt; Performing hash slots allocation on <span style="color:#ae81ff">8</span> nodes...
+    Master<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span> -&gt; Slots <span style="color:#ae81ff">0</span> - <span style="color:#ae81ff">4095</span>
+    Master<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span><span style="color:#f92672">]</span> -&gt; Slots <span style="color:#ae81ff">4096</span> - <span style="color:#ae81ff">8191</span>
+    Master<span style="color:#f92672">[</span><span style="color:#ae81ff">2</span><span style="color:#f92672">]</span> -&gt; Slots <span style="color:#ae81ff">8192</span> - <span style="color:#ae81ff">12287</span>
+    Master<span style="color:#f92672">[</span><span style="color:#ae81ff">3</span><span style="color:#f92672">]</span> -&gt; Slots <span style="color:#ae81ff">12288</span> - <span style="color:#ae81ff">16383</span>
+    Adding replica <span style="color:#ae81ff">192</span>.168.1.6:6381 to <span style="color:#ae81ff">192</span>.168.1.2:6379
+    Adding replica <span style="color:#ae81ff">192</span>.168.1.7:6381 to <span style="color:#ae81ff">192</span>.168.1.6:6379
+    Adding replica <span style="color:#ae81ff">192</span>.168.1.6:6382 to <span style="color:#ae81ff">192</span>.168.1.7:6379
+    Adding replica <span style="color:#ae81ff">192</span>.168.1.7:6380 to <span style="color:#ae81ff">192</span>.168.1.6:6380
+    M: ddd75e058dd4d3d8c6202f6fb1b90f2f6e3936f7 <span style="color:#ae81ff">192</span>.168.1.2:6379
+    slots:<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span>-4095<span style="color:#f92672">]</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">4096</span> slots<span style="color:#f92672">)</span> master
+    M: ed8a5c0f4df226dbc8a5d534f49decb88b5838cd <span style="color:#ae81ff">192</span>.168.1.6:6379
+    slots:<span style="color:#f92672">[</span><span style="color:#ae81ff">4096</span>-8191<span style="color:#f92672">]</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">4096</span> slots<span style="color:#f92672">)</span> master
+    M: 755800e1330a60fde74de939fe7b97daf53abff6 <span style="color:#ae81ff">192</span>.168.1.6:6380
+    slots:<span style="color:#f92672">[</span><span style="color:#ae81ff">12288</span>-16383<span style="color:#f92672">]</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">4096</span> slots<span style="color:#f92672">)</span> master
+    S: 974ded7561fa8fe9263cc5ebf87da12edd53be45 <span style="color:#ae81ff">192</span>.168.1.6:6381
+    replicates ddd75e058dd4d3d8c6202f6fb1b90f2f6e3936f7
+    S: 8de83041cf2ec43930111e93c0255e703e31f609 <span style="color:#ae81ff">192</span>.168.1.6:6382
+    replicates 274ab3f3de33ed601cb33776f5b434ee91cd2288
+    M: 274ab3f3de33ed601cb33776f5b434ee91cd2288 <span style="color:#ae81ff">192</span>.168.1.7:6379
+    slots:<span style="color:#f92672">[</span><span style="color:#ae81ff">8192</span>-12287<span style="color:#f92672">]</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">4096</span> slots<span style="color:#f92672">)</span> master
+    S: 9bf2b9e65d6e91c309926668619a0b613b1ed65b <span style="color:#ae81ff">192</span>.168.1.7:6380
+    replicates 755800e1330a60fde74de939fe7b97daf53abff6
+    S: eee4a71f418caf7dd72f491cb2a54b40f4d749bc <span style="color:#ae81ff">192</span>.168.1.7:6381
+    replicates ed8a5c0f4df226dbc8a5d534f49decb88b5838cd
+   </code></pre></div>
+   输入yes回车，等待集群初始化</p>
+
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    &gt;&gt;&gt; Nodes configuration updated
+    &gt;&gt;&gt; Assign a different config epoch to each node
+    &gt;&gt;&gt; Sending CLUSTER MEET messages to join the cluster
+    Waiting <span style="color:#66d9ef">for</span> the cluster to join
+    .....
+    &gt;&gt;&gt; Performing Cluster Check <span style="color:#f92672">(</span>using node <span style="color:#ae81ff">192</span>.168.1.2:6379<span style="color:#f92672">)</span>
+    M: ddd75e058dd4d3d8c6202f6fb1b90f2f6e3936f7 <span style="color:#ae81ff">192</span>.168.1.2:6379
+    slots:<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span>-4095<span style="color:#f92672">]</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">4096</span> slots<span style="color:#f92672">)</span> master
+    <span style="color:#ae81ff">1</span> additional replica<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>
+    M: 274ab3f3de33ed601cb33776f5b434ee91cd2288 <span style="color:#ae81ff">192</span>.168.1.7:6379
+    slots:<span style="color:#f92672">[</span><span style="color:#ae81ff">8192</span>-12287<span style="color:#f92672">]</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">4096</span> slots<span style="color:#f92672">)</span> master
+    <span style="color:#ae81ff">1</span> additional replica<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>
+    S: 4a8ca1ce2786c45610eb79d9936c09a3ec6fac98 <span style="color:#ae81ff">192</span>.168.1.6:6381
+    slots: <span style="color:#f92672">(</span><span style="color:#ae81ff">0</span> slots<span style="color:#f92672">)</span> slave
+    replicates ddd75e058dd4d3d8c6202f6fb1b90f2f6e3936f7
+    M: 223eb187a9141c3d651deec15a8243ebf5d01fbf <span style="color:#ae81ff">192</span>.168.1.6:6380
+    slots:<span style="color:#f92672">[</span><span style="color:#ae81ff">12288</span>-16383<span style="color:#f92672">]</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">4096</span> slots<span style="color:#f92672">)</span> master
+    <span style="color:#ae81ff">1</span> additional replica<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>
+    S: be352e6487c8fc647077610f0acfc5acbfd8025d <span style="color:#ae81ff">192</span>.168.1.6:6382
+    slots: <span style="color:#f92672">(</span><span style="color:#ae81ff">0</span> slots<span style="color:#f92672">)</span> slave
+    replicates 274ab3f3de33ed601cb33776f5b434ee91cd2288
+    S: 9bf2b9e65d6e91c309926668619a0b613b1ed65b <span style="color:#ae81ff">192</span>.168.1.7:6380
+    slots: <span style="color:#f92672">(</span><span style="color:#ae81ff">0</span> slots<span style="color:#f92672">)</span> slave
+    replicates 223eb187a9141c3d651deec15a8243ebf5d01fbf
+    M: 61f5192703e1258592ed8028fb67f8003d19de34 <span style="color:#ae81ff">192</span>.168.1.6:6379
+    slots:<span style="color:#f92672">[</span><span style="color:#ae81ff">4096</span>-8191<span style="color:#f92672">]</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">4096</span> slots<span style="color:#f92672">)</span> master
+    <span style="color:#ae81ff">1</span> additional replica<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>
+    S: eee4a71f418caf7dd72f491cb2a54b40f4d749bc <span style="color:#ae81ff">192</span>.168.1.7:6381
+    slots: <span style="color:#f92672">(</span><span style="color:#ae81ff">0</span> slots<span style="color:#f92672">)</span> slave
+    replicates 61f5192703e1258592ed8028fb67f8003d19de34
+    <span style="color:#f92672">[</span>OK<span style="color:#f92672">]</span> All nodes agree about slots configuration.
+    &gt;&gt;&gt; Check <span style="color:#66d9ef">for</span> open slots...
+    &gt;&gt;&gt; Check slots coverage...
+    <span style="color:#f92672">[</span>OK<span style="color:#f92672">]</span> All <span style="color:#ae81ff">16384</span> slots covered.</code></pre></div>
+    见到如上信息表示集群已经建立完成</p>
+
+<p>9.通过redis-cli 连接任意一个节点执行 CLUSTER NODES 查看集群状态，也可以通过redis-cli &ndash;cluster check 检查集群状态</p>
+
+<p>10.通过redis-cli向集群写入数据
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">redis-cli -c -h <span style="color:#ae81ff">192</span>.168.1.2 -p <span style="color:#ae81ff">6379</span>
+<span style="color:#ae81ff">192</span>.168.1.2:6379&gt; set foo bar
+-&gt; Redirected to slot <span style="color:#f92672">[</span><span style="color:#ae81ff">12182</span><span style="color:#f92672">]</span> located at <span style="color:#ae81ff">192</span>.168.1.7:6379
+OK
+<span style="color:#ae81ff">192</span>.168.1.7:6379&gt; get foo
+<span style="color:#e6db74">&#34;bar&#34;</span>
+<span style="color:#ae81ff">192</span>.168.1.7:6379&gt; INCR hello
+-&gt; Redirected to slot <span style="color:#f92672">[</span><span style="color:#ae81ff">866</span><span style="color:#f92672">]</span> located at <span style="color:#ae81ff">192</span>.168.1.2:6379
+<span style="color:#f92672">(</span>integer<span style="color:#f92672">)</span> <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">192</span>.168.1.2:6379&gt; INCR hello
+<span style="color:#f92672">(</span>integer<span style="color:#f92672">)</span> <span style="color:#ae81ff">2</span>
+<span style="color:#ae81ff">192</span>.168.1.2:6379&gt; get hello
+<span style="color:#e6db74">&#34;2&#34;</span></code></pre></div></p>
+
+<h1 id="如何日常维护集群">如何日常维护集群？</h1>
+
+<p>Resharding the cluster
+    交互式：
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    redis-cli --cluster reshard <span style="color:#ae81ff">127</span>.0.0.1:7000
+    </code></pre></div>
+    命令行式：
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    redis-cli --cluster reshard &lt;host&gt;:&lt;port&gt; --cluster-from &lt;node-id&gt; --cluster-to &lt;node-id&gt; --cluster-slots &lt;number of slots&gt; --cluster-yes
+    </code></pre></div>
+ 添加节点
+    可以作为master也可以作为slave节点，作为master的节点添加后要Resharding才能使新节点存储数据
+ <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    redis-cli --cluster add-node new_host:new_port existing_host:existing_port
+                 --cluster-slave
+                 --cluster-master-id &lt;arg&gt;
+  </code></pre></div></p>
+
+<p>更多维护见<a href="https://redis.io/topics/cluster-tutorial">官方文档</a></p>
+
+      </div>
     </div>
   </div>
   <div class="pure-u-1-24 pure-u-md-5-24"></div>
@@ -569,8 +566,6 @@ a {
 
         </ul>
         <a href="#" class="pure-menu-link pull-right" id="gototop-btn">↑↑</a>
-        
-        <a href="https://bgzxz.github.io/posts/index.xml" class="pure-menu-link pull-right">RSS</a>
         
       </div>
       
