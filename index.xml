@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>bgzxz1987@email.com (bgzxz)</managingEditor>
     <webMaster>bgzxz1987@email.com (bgzxz)</webMaster>
-    <lastBuildDate>Tue, 21 May 2019 20:31:34 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 22 May 2019 20:31:34 +0800</lastBuildDate>
     
 	<atom:link href="https://bgzxz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>nginx限流</title>
+      <link>https://bgzxz.github.io/posts/nginx_limit_req/</link>
+      <pubDate>Wed, 22 May 2019 20:31:34 +0800</pubDate>
+      <author>bgzxz1987@email.com (bgzxz)</author>
+      <guid>https://bgzxz.github.io/posts/nginx_limit_req/</guid>
+      <description>配置： http { limit_req_zone $binary_remote_addr zone=one:10m rate=1r/s; server { location /search/ { limit_req zone=one burst=5; limit_req_log_level error; limit_req_status 429; } error_page 429 /429.html; } }
+配置指令含义：
+limit_req_zone key zone=name:size rate=rate; 配置根据key来限制请求速率 limit_req zone=one burst=5; 设置限流使用的zone和爆发数 limit_req_log_level 设置被限流的请求的日志纪录级别 limit_req_status 设置被限流请求的状态相应码</description>
+    </item>
     
     <item>
       <title>redis cluster环境搭建</title>
