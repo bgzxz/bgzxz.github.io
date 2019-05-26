@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>bgzxz1987@email.com (bgzxz)</managingEditor>
     <webMaster>bgzxz1987@email.com (bgzxz)</webMaster>
-    <lastBuildDate>Wed, 22 May 2019 20:31:34 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 24 May 2019 20:11:54 +0800</lastBuildDate>
     
 	<atom:link href="https://bgzxz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>使用nginx和keepalived构建高可用websocket</title>
+      <link>https://bgzxz.github.io/posts/build_highly_available_websockets_using_nginx_and_keepalived/</link>
+      <pubDate>Fri, 24 May 2019 20:11:54 +0800</pubDate>
+      <author>bgzxz1987@email.com (bgzxz)</author>
+      <guid>https://bgzxz.github.io/posts/build_highly_available_websockets_using_nginx_and_keepalived/</guid>
+      <description>背景： 日常项目中的消息推送，im等需求会使用到websocket，项目对于高可用和扩展性要求比较高的时候就必须使用一些HA和负载均衡方案，本文将基于keepalived和nginx构建高可用websocket部署。
+部署架构图： 软件配置： server1：
+keepalived配置
+global_defs { } vrrp_script chk_nginx { script &amp;#34;killall -0 nginx&amp;#34; # cheaper than pidof interval 2 # check every 2 seconds } vrrp_instance VI_1 { state BACKUP interface enp0s3 virtual_router_id 51 priority 50 advert_int 1 virtual_ipaddress { 192.168.1.110 } track_script { chk_nginx } } vrrp_instance VI_2 { state MASTER interface enp0s3 virtual_router_id 52 priority 100 advert_int 1 virtual_ipaddress { 192.168.1.112 } track_script { chk_nginx } }  nginx配置：</description>
+    </item>
     
     <item>
       <title>nginx限流</title>
