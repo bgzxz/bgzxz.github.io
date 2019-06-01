@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://bgzxz.github.io/posts/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAhttps%E5%92%8Cnginx-https%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2019-06-01T08:11:54+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bgzxz.github.io/posts/build_highly_available_websockets_using_nginx_and_keepalived/</loc>
     <lastmod>2019-05-24T20:11:54+08:00</lastmod>
   </url>
@@ -74,7 +79,7 @@
   
   <url>
     <loc>https://bgzxz.github.io/posts/</loc>
-    <lastmod>2019-05-24T20:11:54+08:00</lastmod>
+    <lastmod>2019-06-01T08:11:54+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -85,7 +90,7 @@
   
   <url>
     <loc>https://bgzxz.github.io/</loc>
-    <lastmod>2019-05-24T20:11:54+08:00</lastmod>
+    <lastmod>2019-06-01T08:11:54+08:00</lastmod>
     <priority>0</priority>
   </url>
   
